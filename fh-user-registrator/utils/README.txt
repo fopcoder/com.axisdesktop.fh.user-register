@@ -1,3 +1,12 @@
+
+Добавлено
+UserLoginer - общий интерфейс
+ChromeUserLoginer - заполнить как надо для логина на страницу
+FakeUserLoginer - для теста
+
+в App добавлен цикл // login users
+
+----------------------------
 Запуск 
 
 cd utils

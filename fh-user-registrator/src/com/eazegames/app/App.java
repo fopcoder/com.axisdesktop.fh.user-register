@@ -9,9 +9,13 @@ public class App {
     App app = new App();
 
     // создаем одну из возможных реализаций UserCreator
-    // UserCreator creator = new UserCreatorChrome();
-    // UserCreator creator = new FakeUserCreator();
-    UserCreator creator = new GoogleUserCreator();
+    // UserCreator creator = new ChromeUserCreator();
+    UserCreator creator = new FakeUserCreator();
+    // UserCreator creator = new GoogleUserCreator();
+
+    // loginer - подставить нужное
+    // UserLoginer loginer = new ChromeUserLoginer();
+    UserLoginer loginer = new FakeUserLoginer();
 
     try (Scanner scanner = new Scanner(System.in)) {
       System.out.print("Enter number of users: ");
@@ -33,6 +37,17 @@ public class App {
             for (UserInfo user : users) {
               System.out.println(user);
             }
+
+            // login users
+
+            System.out.println("Lets login...");
+
+            for (UserInfo user : users) {
+              UserInfo info = loginer.login(user);
+
+              System.out.println(user + " - " + (info == null ? "FAIL" : "OK"));
+            }
+
           } catch (Exception e) {
             System.err.println(e.getMessage());
           }
