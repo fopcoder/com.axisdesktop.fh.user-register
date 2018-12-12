@@ -29,23 +29,14 @@ public class Token {
 
   public String create() {
     LocalDateTime dt = LocalDateTime.now().plus(expire);
-    String exp = String.valueOf(dt.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
-
     Algorithm alg = Algorithm.HMAC256(key);
-
-    Date exp1 = Date.from(dt.atZone(ZoneId.systemDefault()).toInstant());
+    Date exp = Date.from(dt.atZone(ZoneId.systemDefault()).toInstant());
 
     String token = JWT.create()//
         .withSubject(email)//
-        .withExpiresAt(exp1)//
+        .withExpiresAt(exp)//
         .sign(alg);
 
     return token;
   }
-
-  // {"alg":"HS256"}
-  // {"sub":"valeraignat2020@gmail.com","exp":1544696700}
-  // clientId=EAZ8039ID
-
-  // https://eazegames.com/email-verification-success?clientId=EAZ8039ID&token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWxlcmFpZ25hdDIwMjBAZ21haWwuY29tIiwiZXhwIjoxNTQ0Njk2NzAwfQ.89on1X4W-vjpNEN1Vxm8XmP9JNsn6U_LA48J0cM9dzI
 }
