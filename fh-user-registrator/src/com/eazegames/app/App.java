@@ -17,6 +17,10 @@ public class App {
     // UserLoginer loginer = new ChromeUserLoginer();
     UserLoginer loginer = new FakeUserLoginer();
 
+    // activator - подставить нужное
+    UserActivator activator = new FakeUserActivator();
+    // UserActivator activator = new ChromeUserActivator();
+
     try (Scanner scanner = new Scanner(System.in)) {
       System.out.print("Enter number of users: ");
 
@@ -36,6 +40,15 @@ public class App {
 
             for (UserInfo user : users) {
               System.out.println(user);
+            }
+
+            // activate users
+
+            for (UserInfo user : users) {
+              // set user secret key
+              user.setKey("key");
+
+              activator.activate(user);
             }
 
             // login users

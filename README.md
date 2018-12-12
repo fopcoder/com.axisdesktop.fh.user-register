@@ -1,3 +1,9 @@
+Добавил
+- ChromeUserActivator, FakeUserActivator, UserActivator
+- в App процесс активации
+
+
+-----------------------
 
 Добавить либы из /lib
 
