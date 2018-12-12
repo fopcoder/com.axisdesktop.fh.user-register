@@ -10,5 +10,10 @@
 	<classpathentry kind="lib" path="lib/web/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="lib/web/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="lib/web/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="lib/java-jwt-3.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.9.7.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.9.7.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.9.7.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
