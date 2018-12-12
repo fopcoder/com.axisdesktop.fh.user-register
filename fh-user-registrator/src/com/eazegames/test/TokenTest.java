@@ -7,7 +7,7 @@ class TokenTest {
 
   @Test
   void test() {
-    Token token = new Token("test@mail.com", "111");
+    Token token = new Token("111-key", "test@mail.com");
     System.err.println(token.create());
   }
 
