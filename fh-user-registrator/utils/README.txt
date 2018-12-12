@@ -1,4 +1,15 @@
 
+Добавить либы из /lib
+
+common-codec
+jackson-*
+java-jwt
+
+Добавлен класс
+Token, TokenTest
+
+------------------
+
 Добавлено
 UserLoginer - общий интерфейс
 ChromeUserLoginer - заполнить как надо для логина на страницу
