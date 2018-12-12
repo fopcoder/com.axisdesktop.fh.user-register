@@ -13,7 +13,7 @@ public class Token {
   private Duration expire = Duration.ofDays(1);
 
   public Token(String key, String email) {
-    this(email, key, null);
+    this(key, email, null);
   }
 
   public Token(String key, String email, Duration expire) {
